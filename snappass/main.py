@@ -102,7 +102,7 @@ def handle_password():
 def show_password(password_key):
     password = get_password(password_key)
     if not password:
-        abort(404)
+        return render_template('404.html') # abort(404)
 
     return render_template('password.html', password=password)
 
